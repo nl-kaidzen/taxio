@@ -1,0 +1,18 @@
+body {
+  --light: #d7ecff;
+  --dark: #030404;
+  --primary: #144e98;
+  --secondary: #0071f0;
+  --info: #2daaea;
+  --accent1: #363e3e;
+  --accent2: #c11558;
+  --accent3: #aba0ae;
+  --success: #00a45d;
+  --warning: #e3cb00;
+  --danger: #f31400;
+
+  --font-color-primary: var(--dark);
+  --font-color-secondary: var(--accent3);
+
+  --table-border-color: var(--accent3);
+}
