@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/taxio/static/css/main.7ffe1095.css",
+    "main.js": "/taxio/static/js/main.a90b7a4d.js",
+    "static/js/787.cf63fa06.chunk.js": "/taxio/static/js/787.cf63fa06.chunk.js",
+    "index.html": "/taxio/index.html",
+    "main.7ffe1095.css.map": "/taxio/static/css/main.7ffe1095.css.map",
+    "main.a90b7a4d.js.map": "/taxio/static/js/main.a90b7a4d.js.map",
+    "787.cf63fa06.chunk.js.map": "/taxio/static/js/787.cf63fa06.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7ffe1095.css",
+    "static/js/main.a90b7a4d.js"
+  ]
+}
