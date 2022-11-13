@@ -9,6 +9,10 @@ export const SupportButton = () => {
       target={"_blank"}
       href={"https://www.buymeacoffee.com/akdev"}
       className={style.button}
+      sx={{
+        color: '#fff',
+        textDecoration: 'none'
+      }}
     >
       <Icon component={LocalCafeIcon} className={style.icon} />
       Support
