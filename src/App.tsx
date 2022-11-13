@@ -9,7 +9,7 @@ import {
     Typography,
 } from "@mui/material";
 import { NewDeclaration } from "./pages/NewDeclaration";
-import {SupportButton} from "./components/SupportButton";
+import { SupportButton } from "./components/SupportButton";
 
 function App() {
   return (
@@ -24,6 +24,7 @@ function App() {
               : theme.palette.grey[900],
           flexGrow: 1,
           overflow: "auto",
+            maxHeight: 'calc(100vh - 78px)'
         }}
       >
         <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
@@ -35,7 +36,6 @@ function App() {
                   p: 2,
                   display: "flex",
                   flexDirection: "column",
-                  height: "500px",
                 }}
               >
                 <NewDeclaration />
@@ -47,7 +47,7 @@ function App() {
         <Box
             component="footer"
             sx={{
-                py: 3,
+                py: 2,
                 px: 2,
                 mt: 'auto',
                 backgroundColor: (theme) =>
@@ -61,7 +61,7 @@ function App() {
                 gap: '1rem'
             }}>
                 <Typography variant="body1">
-                    Hey! if you like this service, you can support me :)
+                    Hey!👋 If you like this service, you can support me :)
                 </Typography>
                 <SupportButton />
             </Container>

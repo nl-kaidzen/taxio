@@ -1,0 +1,20 @@
+.button {
+    display: flex;
+    background-color: rgb(255, 95, 95);
+    color: #ffffff;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    width: fit-content;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.button:hover, .button:focus{
+    background-color: #f25a5a;
+}
+
+.icon {
+    margin-right: 0.5rem;
+}

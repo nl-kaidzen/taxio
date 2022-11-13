@@ -1,7 +1,7 @@
 import { makeAutoObservable } from "mobx";
 import { Payment } from "../models/Declaration";
 import { RootStore } from "./rootStore";
-import {roundTo} from "round-to";
+import { roundTo } from "round-to";
 
 export class PaymentsStore {
   constructor(public root: RootStore) {
@@ -21,14 +21,14 @@ export class PaymentsStore {
       return accum + payment.parentValue;
     }, 0);
 
-    return roundTo(total, 2)
+    return roundTo(total, 2);
   }
 
   get totalPaymentsGel() {
-    const total =  this.payments.reduce((accum, payment) => {
+    const total = this.payments.reduce((accum, payment) => {
       return accum + payment?.gelValue;
     }, 0);
 
-    return roundTo(total, 2)
+    return roundTo(total, 2);
   }
 }
