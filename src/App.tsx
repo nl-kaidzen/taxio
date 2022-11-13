@@ -1,67 +1,31 @@
-import React from 'react';
-import './App.css';
-import { Box, Container, CssBaseline, Grid, Paper, styled, Toolbar, Typography } from '@mui/material';
-import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
-import { NewDeclaration } from './pages/NewDeclaration';
-
-interface AppBarProps extends MuiAppBarProps {
-  open?: boolean;
-}
-
-const drawerWidth = 240;
-
-const AppBar = styled(MuiAppBar, {
-  shouldForwardProp: (prop) => prop !== 'open',
-})<AppBarProps>(({ theme, open }) => ({
-  zIndex: theme.zIndex.drawer + 1,
-  transition: theme.transitions.create(['width', 'margin'], {
-    easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen,
-  }),
-  ...(open && {
-    marginLeft: drawerWidth,
-    width: `calc(100% - ${drawerWidth}px)`,
-    transition: theme.transitions.create(['width', 'margin'], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  }),
-}));
+import React from "react";
+import "./App.css";
+import {
+    Box,
+    Container,
+    CssBaseline,
+    Grid,
+    Paper,
+    Typography,
+} from "@mui/material";
+import { NewDeclaration } from "./pages/NewDeclaration";
+import {SupportButton} from "./components/SupportButton";
 
 function App() {
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
       <CssBaseline />
-      <AppBar position="absolute" open={false}>
-        <Toolbar
-          sx={{
-            pr: '24px', // keep right padding when drawer closed
-          }}
-        >
-          <Typography
-            component="h1"
-            variant="h6"
-            color="inherit"
-            noWrap
-            sx={{ flexGrow: 1 }}
-          >
-            Dashboard
-          </Typography>
-        </Toolbar>
-      </AppBar>
       <Box
         component="main"
         sx={{
-            backgroundColor: (theme) =>
-                theme.palette.mode === 'light'
-                    ? theme.palette.grey[100]
-                    : theme.palette.grey[900],
+          backgroundColor: (theme) =>
+            theme.palette.mode === "light"
+              ? theme.palette.grey[100]
+              : theme.palette.grey[900],
           flexGrow: 1,
-          height: '100vh',
-          overflow: 'auto',
+          overflow: "auto",
         }}
       >
-        <Toolbar />
         <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
           <Grid container spacing={3}>
             {/* Chart */}
@@ -69,9 +33,9 @@ function App() {
               <Paper
                 sx={{
                   p: 2,
-                  display: 'flex',
-                  flexDirection: 'column',
-                  height: '500px',
+                  display: "flex",
+                  flexDirection: "column",
+                  height: "500px",
                 }}
               >
                 <NewDeclaration />
@@ -80,7 +44,28 @@ function App() {
           </Grid>
         </Container>
       </Box>
-
+        <Box
+            component="footer"
+            sx={{
+                py: 3,
+                px: 2,
+                mt: 'auto',
+                backgroundColor: (theme) =>
+                    theme.palette.mode === 'light'
+                        ? theme.palette.grey[200]
+                        : theme.palette.grey[800],
+            }}>
+            <Container maxWidth="sm" sx={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '1rem'
+            }}>
+                <Typography variant="body1">
+                    Hey! if you like this service, you can support me :)
+                </Typography>
+                <SupportButton />
+            </Container>
+        </Box>
     </Box>
   );
 }

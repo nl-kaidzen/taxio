@@ -8,7 +8,7 @@ import { RootStore } from "./rootStore";
 import { v4 as uuidv4 } from "uuid";
 import { format } from "date-fns";
 import React from "react";
-import {roundToUp} from "round-to";
+import { roundToUp } from "round-to";
 
 export class ConvertationStore {
   constructor(public root: RootStore) {
@@ -54,7 +54,7 @@ export class ConvertationStore {
         date: validFromDate,
         currency: code,
         parentValue: value,
-        gelValue: roundToUp(value * rate, 2) ,
+        gelValue: roundToUp(value * rate, 2),
       };
 
       runInAction(() => (this.isLoaded = true));
