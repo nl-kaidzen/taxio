@@ -32,7 +32,7 @@ function App() {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar position="absolute" open={true}>
+      <AppBar position="absolute" open={false}>
         <Toolbar
           sx={{
             pr: '24px', // keep right padding when drawer closed
