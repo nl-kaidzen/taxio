@@ -1,12 +1,12 @@
 import React from "react";
 import "./App.css";
 import {
-    Box,
-    Container,
-    CssBaseline,
-    Grid,
-    Paper,
-    Typography,
+  Box,
+  Container,
+  CssBaseline,
+  Grid,
+  Paper,
+  Typography,
 } from "@mui/material";
 import { NewDeclaration } from "./pages/NewDeclaration";
 import { SupportButton } from "./components/SupportButton";
@@ -24,7 +24,7 @@ function App() {
               : theme.palette.grey[900],
           flexGrow: 1,
           overflow: "auto",
-            maxHeight: 'calc(100vh - 78px)'
+          maxHeight: "calc(100vh - 78px)",
         }}
       >
         <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
@@ -44,28 +44,32 @@ function App() {
           </Grid>
         </Container>
       </Box>
-        <Box
-            component="footer"
-            sx={{
-                py: 2,
-                px: 2,
-                mt: 'auto',
-                backgroundColor: (theme) =>
-                    theme.palette.mode === 'light'
-                        ? theme.palette.grey[200]
-                        : theme.palette.grey[800],
-            }}>
-            <Container maxWidth="sm" sx={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '1rem'
-            }}>
-                <Typography variant="body1">
-                    Hey!👋 If you like this service, you can support me :)
-                </Typography>
-                <SupportButton />
-            </Container>
-        </Box>
+      <Box
+        component="footer"
+        sx={{
+          py: 2,
+          px: 2,
+          mt: "auto",
+          backgroundColor: (theme) =>
+            theme.palette.mode === "light"
+              ? theme.palette.grey[200]
+              : theme.palette.grey[800],
+        }}
+      >
+        <Container
+          maxWidth="sm"
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            gap: "1rem",
+          }}
+        >
+          <Typography variant="body1">
+            Hey!👋 If you like this service, you can support me :)
+          </Typography>
+          <SupportButton />
+        </Container>
+      </Box>
     </Box>
   );
 }
