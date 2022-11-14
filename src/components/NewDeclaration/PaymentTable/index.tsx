@@ -110,6 +110,7 @@ export const PaymentsTable = observer(() => {
                   <TableCell align="center"></TableCell>
                   <TableCell align="left"></TableCell>
                   <TableCell align="right"></TableCell>
+                  <TableCell align="right"></TableCell>
                   <TableCell align="right">{totalPaymentsUSD}</TableCell>
                   <TableCell align="right">{totalPaymentsGel}</TableCell>
                 </TableRow>
