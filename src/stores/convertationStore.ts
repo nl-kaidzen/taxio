@@ -55,6 +55,7 @@ export class ConvertationStore {
         currency: code,
         parentValue: value,
         gelValue: roundToUp(value * rate, 2),
+        rate
       };
 
       runInAction(() => (this.isLoaded = true));

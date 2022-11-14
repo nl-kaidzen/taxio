@@ -61,6 +61,7 @@ export const PaymentsTable = observer(() => {
                 </TableCell>
                 <TableCell align="center">#</TableCell>
                 <TableCell align="left">Date</TableCell>
+                <TableCell align="right">Rate</TableCell>
                 <TableCell align="right">Currency</TableCell>
                 <TableCell align="right">Value</TableCell>
                 <TableCell align="right">GEL Value</TableCell>
@@ -92,6 +93,7 @@ export const PaymentsTable = observer(() => {
                     </TableCell>
                     <TableCell align="center">{index + 1}</TableCell>
                     <TableCell align="left">{payment.date}</TableCell>
+                    <TableCell align="right">{payment.rate}</TableCell>
                     <TableCell align="right">{payment.currency}</TableCell>
                     <TableCell align="right">
                       {payment.parentValue.toFixed(2)}

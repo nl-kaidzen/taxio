@@ -9,6 +9,7 @@ export interface Payment {
   currency: CurrencyType;
   parentValue: number;
   gelValue: number;
+  rate: number;
 }
 
 export type ConvertationAPIResponse = ConvertationResult[];
@@ -68,7 +69,7 @@ export const MonthNameByShortageMap = {
   SEP: "September",
   OCT: "October",
   NOV: "November",
-  DEC: "Decemver",
+  DEC: "December",
 };
 
 export const MonthNumberByShortageMap = {
